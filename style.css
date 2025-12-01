@@ -203,5 +203,10 @@ section {
 
     .footer-container {
         flex-direction: column;
+        gap: 42px;
+    }
+
+    .vm-section {
+        height: 100vh !important;
     }
 }
