@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- gspa cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar w-full py-6 px-9 flex items-center justify-between rounded-2xl bg-bg-card h-[96px]">
+        <div class="logo">
+            <svg fill="none" height="48" viewBox="0 0 42 48" width="42" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m15.2286 4.99951c-3.2154 0-6.18655 1.71539-7.79425 4.5l-5.7735 9.99999c-1.6076941 2.7846-1.607697 6.2154 0 9l5.7735 10c1.6077 2.7846 4.57885 4.5 7.79425 4.5h11.547c3.2154 0 6.1865-1.7154 7.7942-4.5l5.7735-10c1.6077-2.7846 1.6077-6.2154 0-9l-5.7735-9.99999c-1.6077-2.78461-4.5788-4.5-7.7942-4.5zm11.547 5.99999h-7.2169c-1.1547 0-1.8762 1.2499-1.298 2.2494 1.784 3.0838 3.5722 6.1653 5.3536 9.2506.5359.9282.5359 2.0718 0 3-1.7814 3.0854-3.5696 6.1668-5.3536 9.2506-.5782.9995.1433 2.2494 1.298 2.2494h7.2169c1.0718 0 2.0622-.5718 2.5981-1.5l5.7735-10c.5359-.9282.5359-2.0718 0-3l-5.7735-10c-.5359-.9282-1.5263-1.5-2.5981-1.5z" fill="#fff" fill-rule="evenodd"/></svg>
+        </div>
+        
+        <div class="nav-links font-inter flex items-center gap-8">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-cta flex items-center gap-8">
+            <div class="nav-btn font-inter bg-accent py-2 px-4 rounded">Start a Project</div>
+
+            <button class="menu-icon hidden">
+                <i data-lucide="menu" id="menuBtn"></i>
+            </button>
+        </div>
+    </nav>
+    
+
+    <div class="inset-0 -z-10 h-[100vh] w-full flex flex-col items-center justify-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#8b5cf6_100%)]" id="hero">
+        <div class="hero-text-content text-center sm:w-full sm:px-24px md:w-[540px]">
+            <h3 class="font-light font-inter text-zinc-500 pb-6">NEXUS DIGITAL AGENCY STUDIO</h3>
+            <h1 class="main-header text-4xl sm:text-6xl md:text-6xl md:leading-[108.6%] font-space font-semibold">
+                We Turn Ideas Into Digital Products
+            </h1>
+
+            <p class="hero-text text-zinc-500 font-inter pt-4 text-[18px]">
+                Strategic design and development for ambitious brands ready to make an impact.
+            </p>
+        </div>
+
+        <div class="main-cta flex items-center gap-8 mt-16">
+           <a href="#work"><button class="cta bg-accent py-2 px-4 rounded">View Our Work</button></a>
+           <a href="#">
+                <button class="cta border border-1px border-accent py-2 px-4 rounded hover:bg-accent">
+                    Get in Touch
+                </button>
+           </a>
+        </div>
+    </div>
+
+
+
+    <!-- service section  -->
+    <section class="service-section md:h-[60vh] bg-bg-secondary py-6 " id="services">
+        <h1 class="title font-space text-4xl text-center">What We Do</h1>
+
+        <div class="flex items-center jusitfy-center w-full h-full">
+
+            <div class="service-container grid sm:grid-cols-1 md:grid-cols-3 gap-10 pt-5">
+                <div class="card bg-bg-card rounded-2xl py-6 px-9">
+                    <i data-lucide="code"></i>
+                    <h2 class="font-space text-2xl pt-8 pb-3">Web Development</h2>
+                    <p class="font-inter text-zinc-500">
+                        Custom websites and web applications built with 
+                        modern tech. Fast, responsive, and scalable.
+                    </p>
+                </div>
+    
+                <div class="card bg-bg-card rounded-2xl py-6 px-9">
+                    <i data-lucide="palette"></i>
+                    <h2 class="font-space text-2xl pt-8 pb-3">UI/UX Design</h2>
+                    <p class="font-inter text-zinc-500">
+                        Beautiful interfaces that users love. 
+                        We design experiences that convert visitors into customers.
+                    </p>
+                </div>
+                <div class="card bg-bg-card rounded-2xl py-6 px-9">
+                    <i data-lucide="layers"></i>
+                    <h2 class="font-space text-2xl pt-8 pb-3">Brand Identity</h2>
+                    <p class="font-inter text-zinc-500">
+                        Complete brand systems from logo to guidelines. 
+                        Stand out with a memorable identity.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- work / portfolio section -->
+    <section class="work-section py-6" id="work">
+        <h1 class="title text-center text-4xl font-space">Featured Work</h1>
+        <p class="font-inter text-center text-zinc-500 pb-5">Recent projects we're proud of</p>
+
+
+        <div class="work-contianer grid sm:grid-cols-1 md:grid-cols-2 gap-10 mt-6">
+            <div class="project-card bg-bg-card rounded-2xl overflow-hidden">
+                <div class="img h-[480px] overflow-hidden">
+                    <img src="img/movieFinder.png" alt="">
+                </div>
+
+                <div class="project-card-content py-3 px-9">
+                    <div class="card-header flex justify-between items-center mt-4">
+                        <div class="tags flex gap-6">
+                            <span class="font-inter px-2 py-1 bg-purple-600 rounded-lg text-xs">Web App</span>
+                            <span class="font-inter px-2 py-1 bg-amber-600 rounded-lg text-xs">API Integration</span>
+                        </div>
+                        <div class="links">
+                            <a href="#" class="view-link flex items-center  underline ">View More <i data-lucide="arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-card-title text-2xl mt-8 font-space">Movie Search App</h3>
+                    <p class="font-inter text-zinc-500 mt-2">
+                        real-time movie search with advanced UI style.
+                    </p>
+                </div>
+            </div>
+            <div class="project-card bg-bg-card rounded-2xl overflow-hidden">
+                <div class="img h-[480px] overflow-hidden">
+                    <img src="img/space-exploration.png" alt="">
+                </div>
+
+                <div class="project-card-content py-3 px-9">
+                    <div class="card-header flex justify-between items-center mt-4">
+                        <div class="tags flex gap-6">
+                            <span class="font-inter px-2 py-1 bg-purple-600 rounded-lg text-xs">HTML</span>
+                            <span class="font-inter px-2 py-1 bg-amber-600 rounded-lg text-xs">CSS</span>
+                            <span class="font-inter px-2 py-1 bg-yellow-800 rounded-lg text-xs">JavaScript</span>
+                        </div>
+                        <div class="links">
+                            <a href="#" class="view-link flex items-center  underline ">View More <i data-lucide="arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-card-title text-2xl mt-8 font-space">Space Exploration </h3>
+                    <p class="font-inter text-zinc-500 mt-2">
+                        An educative site on space exploration
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="process-section py-6">
+        <div class="title font-space text-4xl text-center">How We Work</div>
+
+        <div class="process-contianer grid grid-cols-1 gap-10 mt-9">
+            <div class="process-card bg-bg-card px-8 py-20">
+                <div class="process-card-content w-full h-full gap-32 ">
+                    <div class="step-number font-space font-light overflow-hidden h-[160px]">
+                        <span>01</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="search"></i>
+                        <h2 class="font-space text-2xl pt-4 pb-2">Discovery</h2>
+                        <p class="font-inter text-zinc-500 process-main-text">
+                            We start by understanding your goals, audience, and 
+                            challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-card bg-bg-card px-8 py-20">
+                <div class="process-card-content gap-32 sm:gap-20">
+                    <div>
+                        <i data-lucide="lightbulb"></i>
+                        <h2 class="font-space text-2xl pt-4 pb-2">Strategy</h2>
+                        <p class="font-inter text-zinc-500 process-main-text">
+                            We plan the roadmap and define the solution that fits your needs.
+                        </p>
+                    </div>
+
+                    <div class="step-number font-space font-light overflow-hidden h-[160px]">
+                        <span>02</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-card bg-bg-card px-8 py-20">
+                <div class="process-card-content gap-32">
+                    <div class="step-number font-space font-light overflow-hidden h-[160px]">
+                        <span>03</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="pencil-line"></i>
+                        <h2 class="font-space text-2xl pt-4 pb-2">Design & Build</h2>
+                        <p class="font-inter text-zinc-500 process-main-text">
+                            Our team brings ideas to life with beautiful design and clean 
+                            code.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-card bg-bg-card px-8 py-20">
+                <div class="process-card-content gap-32">
+                    <div>
+                        <i data-lucide="rocket"></i>
+                        <h2 class="font-space text-2xl pt-6 pb-2">Launch & Support</h2>
+                        <p class="font-inter text-zinc-500 process-main-text">
+                            We launch your project and provide ongoing support for success.
+                        </p>
+                    </div>
+
+                    <div class="step-number font-space font-light overflow-hidden h-[160px]">
+                        <span>04</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <section class="testimonial-section h-[100vh] w-full">
+        <h2 class="title font-space text-4xl text-center">What Our Client Say</h2>
+
+        <div class="testimonial-wrapper">
+            <div class="testimonial-cards flex gap-10">
+
+                <div class="testimonial-card bg-bg-card p-8 rounded-lg min-w-[500px] h-[400px]">
+                    <div class="testimonial-card-content text-center flex flex-col items-center justify-center gap-4">
+                        <h2 class="text-4xl font-space">Tunde Adebayo</h2>
+                        <p class="text-xs text-zinc-300 font-inter">CEO at TechHub Lagos</p>
+
+                        <p class="main-testimonial text-zinc-500 font-inter mt-6">
+                            Nexus Studio transformed our online presence. The new website is 
+                            stunning and our conversions are up to 60%.
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-bg-card p-8 rounded-lg min-w-[500px] h-[400px]">
+                    <div class="testimonial-card-content text-center flex flex-col items-center justify-center gap-4">
+                        <h2 class="text-4xl font-space">Chiamaka Okafor</h2>
+                        <p class="text-xs text-zinc-300 font-inter">Founder of GlowSkin</p>
+
+                        <p class="main-testimonial text-zinc-500 font-inter mt-6">
+                            Professional, creative, and always on time. Best decision we made for 
+                            our brand.
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-bg-card p-8 rounded-lg min-w-[500px] h-[400px]">
+                    <div class="testimonial-card-content text-center flex flex-col items-center justify-center gap-4">
+                        <h2 class="text-4xl font-space">Ibrahim Musa</h2>
+                        <p class="text-xs text-zinc-300 font-inter">Director at EduLearn</p>
+
+                        <p class="main-testimonial text-zinc-500 font-inter mt-6">
+                            They didn't just build a website they built a digital experience our 
+                            customers love.
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-bg-card p-8 rounded-lg min-w-[500px] h-[400px]">
+                    <div class="testimonial-card-content text-center flex flex-col items-center justify-center gap-4">
+                        <h2 class="text-4xl font-space">Chinwe Okafor</h2>
+                        <p class="text-xs text-zinc-300 font-inter">Product Manager at Novatech Systems</p>
+
+                        <p class="main-testimonial text-zinc-500 font-inter mt-6">
+                            Working with this team was a game changer. They understood our 
+                            vision from day one and delivered a product far beyond what we 
+                            imagined. The communication was flawless throughout the project.
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-bg-card p-8 rounded-lg min-w-[500px] h-[400px]">
+                    <div class="testimonial-card-content text-center flex flex-col items-center justify-center gap-4">
+                        <h2 class="text-4xl font-space">Emeka Nwosu</h2>
+                        <p class="text-xs text-zinc-300 font-inter">CTO at BrightWave Solutions</p>
+
+                        <p class="main-testimonial text-zinc-500 font-inter mt-6">
+                            Their process is incredibly efficient. They transformed our 
+                            outdated platform into a fast, modern experience that our 
+                            customers love. The attention to detail is unmatched
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-bg-card p-8 rounded-lg min-w-[500px] h-[400px]">
+                    <div class="testimonial-card-content text-center flex flex-col items-center justify-center gap-4">
+                        <h2 class="text-4xl font-space">Aisha Lawal</h2>
+                        <p class="text-xs text-zinc-300 font-inter">Creative Director at Pixel & Co.</p>
+
+                        <p class="main-testimonial text-zinc-500 font-inter mt-6">
+                            From design to deployment, everything felt seamless. 
+                            They took our ideas, refined them, and built something we’re 
+                            proud to showcase. I highly recommend their services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="cta-section py-20">
+        <div class="cta-container flex flex-col py-20 items-center justify-center">
+            <h1 class="text-5xl font-space text-center">Ready to Start Your Project?</h1>
+            <p class="font-inter mt-4 text-zinc-200 text-center">
+                Let's build something amazing together.
+            </p>
+            <a href="#" class="mt-9"><button class="cta-btn">Get in Touch</button></a>
+        </div>
+    </section>
+
+
+
+
+    <!-- mission and vision section -->
+    <section class="vm-section py-7 bg-bg-secondary h-[60vh] flex flex-col items-center justify-center gap-20">
+        <h1 class="title font-space text-4xl text-center">Our Vision & Mission</h1>
+
+        <div class="vm-contianer grid sm:grid-cols-1 md:grid-cols-2 gap-10 mt-8">
+            <div class="vm-card bg-bg-card rounded-2xl py-6 px-9">
+                <i data-lucide="eye"></i>
+                <h2 class="font-space text-3xl pt-8 pb-3">Our Vision</h2>
+                <p class="font-inter text-zinc-500">
+                    To be the leading digital partner for innovative brands 
+                    across Africa, empowering businesses to thrive in the 
+                    digital age through exceptional design and technology.
+                </p>
+            </div>
+
+            <div class="vm-card bg-bg-card rounded-2xl py-6 px-9">
+                <i data-lucide="compass"></i>
+                <h2 class="font-space text-3xl pt-8 pb-3">Our Mission</h2>
+                <p class="font-inter text-zinc-500">
+                    We create digital solutions that solve real problems. 
+                    By combining creativity with technical excellence, 
+                    we help brands connect with their audience and achieve 
+                    measurable results.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- footer -->
+    <footer class="bg-bg-card py-20">
+        <div class="footer-container flex items-start justify-between px-[10%]">
+            <div class="flex flex-col gap-7">
+                <div class="logo flex items-center gap-2">
+                    <svg fill="none" height="48" viewBox="0 0 42 48" width="42" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m15.2286 4.99951c-3.2154 0-6.18655 1.71539-7.79425 4.5l-5.7735 9.99999c-1.6076941 2.7846-1.607697 6.2154 0 9l5.7735 10c1.6077 2.7846 4.57885 4.5 7.79425 4.5h11.547c3.2154 0 6.1865-1.7154 7.7942-4.5l5.7735-10c1.6077-2.7846 1.6077-6.2154 0-9l-5.7735-9.99999c-1.6077-2.78461-4.5788-4.5-7.7942-4.5zm11.547 5.99999h-7.2169c-1.1547 0-1.8762 1.2499-1.298 2.2494 1.784 3.0838 3.5722 6.1653 5.3536 9.2506.5359.9282.5359 2.0718 0 3-1.7814 3.0854-3.5696 6.1668-5.3536 9.2506-.5782.9995.1433 2.2494 1.298 2.2494h7.2169c1.0718 0 2.0622-.5718 2.5981-1.5l5.7735-10c.5359-.9282.5359-2.0718 0-3l-5.7735-10c-.5359-.9282-1.5263-1.5-2.5981-1.5z" fill="#fff" fill-rule="evenodd"/></svg>
+                    <h1 class="text-2xl font-space">Nexus Digital Agency</h1>
+                </div>
+
+                <p class="font-inter text-zinc-500 max-w-[400px]">
+                    We're a digital agency creating impactful web experiences for forward-thinking brands.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <h2 class="font-space text-2xl font-semibold">Quick Links</h2>
+                <div class="flex flex-col font-inter gap-2 text-zinc-500">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Projects</a>
+                    <a href="#">How We Work</a>
+                    <a href="#">What Our Clients Say</a>
+                    <a href="#">Vision & Mission</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <h2 class="font-space text-2xl font-semibold">Other Links</h2>
+                <div class="flex flex-col font-inter gap-2 text-zinc-500">
+                    <a href="#">Career</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <h2 class="font-space text-2xl font-semibold">Connect</h2>
+                <div class="flex flex-col font-inter gap-4 text-zinc-500">
+                    <p>Email: <a href="#">hello@nexusstudio.com</a></p>
+                    <p>Phone: <a href="#">+234 9099999999</a></p>
+                    <div class="socials flex items-center gap-2 mt-4">
+                        <a href="#" class="social-links"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="social-links"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="social-links"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- tailwind cdn link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        lucide.createIcons();
+
+        tailwind.config = {
+            theme: {
+            extend: {
+                colors: {
+                    'bg-primary': '#000000',
+                    'bg-secondary': '#0a0a0a',
+                    'bg-card': '#151515',
+                    'text-muted': '#9ca3af',
+                    'accent': '#8b5cf6',
+                    'accent-hover': '#8b5cf6',
+                },
+                fontFamily: {
+                    'space': ['Space Grotesk', 'sans-serif'],
+                    'inter': ['Inter', 'sans-serif'],
+                }
+            }
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
