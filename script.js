@@ -55,8 +55,8 @@ gsap.from(".hero-text", {
 gsap.from(".card", {
     y: 45,
     opacity: 0,
-    delay: 0.5,
     stagger: 0.2,
+    delay: 0.2,
     ease: "power2.out",
     scrollTrigger: {
         trigger: ".service-section",
@@ -67,14 +67,26 @@ gsap.from(".card", {
 gsap.from(".project-card", {
     y: 45,
     opacity: 0,
-    delay: 0.5,
+    delay: 0.2,
     stagger: 0.2,
     ease: "power2.out",
     scrollTrigger: {
         trigger: ".work-section",
         start: "top 60%",
     }
-})
+});
+
+gsap.from(".step-number", {
+    y: "400px",
+    opacity: 0,
+    delay: 0.2,
+    stagger: 0.3,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".process-card",
+        start: "top 40%",
+    }
+});
 
 const testimonialWrapper = document.querySelector(".testimonial-wrapper");
 const testimonialCards = document.querySelector(".testimonial-cards");
