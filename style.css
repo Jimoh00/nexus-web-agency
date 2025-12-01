@@ -117,6 +117,7 @@ section {
     background: linear-gradient(270deg, #8b5cf6, #ec4899, #8b5cf6);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    height: 60vh;
 }
 
 
@@ -198,5 +199,9 @@ section {
     .testimonial-card {
         min-width: 90vw;
         min-height: 400px;
+    }
+
+    .footer-container {
+        flex-direction: column;
     }
 }
