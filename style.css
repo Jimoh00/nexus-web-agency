@@ -207,6 +207,10 @@ section {
         gap: 16px !important;
     }
 
+    .card-header {
+        flex-direction: column;
+    }
+
     .process-main-text {
         width: 100%;
     }
