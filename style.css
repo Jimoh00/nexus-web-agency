@@ -120,6 +120,11 @@ section {
     transition: color 0.3s ease;
 }
 
+.footer-link:hover {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
 @media (max-width: 768px) {
     section {
         padding: 24px 5% !important;
@@ -157,7 +162,7 @@ section {
         left: 0;
         opacity: 0;
         visibility: hidden;
-        align-items: flex-start !important;
+        align-items: center !important;
         padding-left: 16px;
     }
 
@@ -206,8 +211,12 @@ section {
         width: 100%;
     }
 
+    .reversed {
+        flex-direction: column-reverse;
+    }
+
     .step-number {
-        font-size: 80px !important;
+        font-size: 100px !important;
         letter-spacing: 16px !important;
         height: 80px !important;
     }
